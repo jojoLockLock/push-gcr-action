@@ -19,7 +19,7 @@ inputs:
     description: "Tag use branch name when push"
     default: "false"
     required: false
-   buildArg:
+  buildArg:
     description: "Docker build argument"
     required: false
 branding:
