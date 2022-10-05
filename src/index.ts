@@ -12,6 +12,9 @@ async function run() {
     const tag = `${imageName}:${shortSha}`;
     
     const buildArg = input.buildArg?`--build-arg ${input.buildArg}`:""
+    
+    core.info("-------------")
+    core.info(JSON.stringify(input, null, 2));
 
     await exec.exec(`docker build ${input.path} --file ${input.dockerfile} --tag ${tag} ${buildArg}`);
 
