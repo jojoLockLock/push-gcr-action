@@ -15,6 +15,8 @@ async function run() {
     
     core.info("-------------")
     core.info(JSON.stringify(input, null, 2));
+    console.info("-------------")
+    console.info(JSON.stringify(input, null, 2));
 
     await exec.exec(`docker build ${input.path} --file ${input.dockerfile} --tag ${tag} ${buildArg}`);
 
